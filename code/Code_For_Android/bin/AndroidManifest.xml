@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.ass"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+    
+    <!-- 更改网络状态权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 读短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 写短信权限 -->
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <!-- 发送短信权限 -->
+	<uses-permission android:name="android.permission.SEND_SMS"/>
+	<!-- 获取应用程序大小 -->
+	<uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+	<!-- 读取扩展存储权限 -->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<!-- 写入扩展存储权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name=".AssActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.android.ass.AssService">
+            
+        </service>
+    </application>
+
+</manifest>
