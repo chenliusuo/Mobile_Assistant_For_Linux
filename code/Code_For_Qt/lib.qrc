@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/lib">
+        <file>libsockClient.a</file>
+        <file>libconnect_judg.a</file>
+    </qresource>
+</RCC>
